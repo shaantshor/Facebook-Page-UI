@@ -1,0 +1,647 @@
+:root {
+    --headerbg: white;
+    --bodygrey: #e9ebee;
+    --darkergrey: #616771;
+    --blue: #4267b3;
+    --lightgrey: lightgrey;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+body {
+    background-color: var(--bodygrey);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* header - nav1, nav2, nav3 */
+header {
+    padding: 2px;
+   width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    background: var(--headerbg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.fbicon {
+    margin: 0 5px;
+}
+
+.nav1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.searchbox {
+    display: flex;
+    align-items: center;
+    background-color: var(--bodygrey);
+    padding: 3px;
+    border-radius: 20px;
+}
+
+.searchbox img {
+    width: 16px;
+    height: 16px;
+}
+
+.searchbox input {
+    border: none;
+    background-color: transparent;
+
+}
+
+.nav2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav2 ul,
+.nav3 ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.nav2 img {
+    margin: 0 38px;
+    width: 24px;
+    height: 24px;
+
+}
+
+.nav2 img:hover,
+.nav3 img:hover {
+    background-color: var(--bodygrey);
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.nav3 img {
+    margin: 0 12px;
+    width: 24px;
+    height: 24px;
+}
+
+/* header ends */
+
+
+/* main section starts */
+
+main {
+    display: flex;
+    padding: 5px;
+    /* justify-content: space-between; */
+   
+}
+
+.sidebar1-list1,
+.sidebar1-list2 {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 550;
+    margin-bottom: 8px;
+}
+
+.sidebar1 img {
+    margin: 0px 10px 5px 5px;
+    height: 24px;
+    width: 24px;
+}
+
+.sidebar1 img:hover {
+    cursor: pointer;
+}
+
+.arrow {
+    background-color: var(--lightgrey);
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.sidebar1-hr {
+    border: 1px solid var(--lightgrey);
+    width: 100%;
+}
+
+
+.shortcut {
+    margin: 5px;
+    font-size: 1rem;
+    color: var(--darkergrey);
+}
+
+
+.feed {
+
+    margin-top: 5px;
+    margin-left: auto;
+    
+    margin-right: auto;
+
+}
+
+.stories {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+.mystory,
+.friend-story {
+    width: 85px;
+    height: 170px;
+    overflow: hidden;
+    margin-right: 15px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.friend-story:last-of-type {
+    margin: 0;
+}
+
+.mystory img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.mystory .upload {
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    position: relative;
+    bottom: 50px;
+    cursor: pointer;
+}
+
+.mystory .upload img {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.upload .tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 10px;
+    font-weight: 550;
+    font-size: 0.7rem;
+}
+
+
+/* 
+.friend-story{
+    width: 70px;
+    height: 140px;
+    overflow: hidden;
+    margin: 0 8px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    cursor: pointer;
+} */
+
+.friend-story img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.friend-story .story-profile {
+    position: relative;
+    bottom: 165px;
+    margin-left: 5px;
+}
+
+.friend-story .story-profile img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 3px solid rgb(12, 106, 230);
+}
+
+
+
+.story-name {
+    position: relative;
+    bottom: 60px;
+    padding-left: 7px;
+
+
+}
+
+.story-name .name {
+    color: #fff;
+    font-weight: 550;
+    font-size: 0.7rem;
+
+}
+
+
+
+.my_post {
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+}
+
+.my_post img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.post_top {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 5px;
+}
+
+.post_top input {
+    width: 90%;
+    padding: 5px;
+    margin-left: 5px;
+    border: 0;
+    outline: none;
+    background: var(--bodygrey);
+    border-radius: 10px;
+    font-size: 0.9rem;
+    /* background-color: var(--headerbg) */
+}
+
+.post_top input:hover {
+    background: #e3e3e3;
+
+}
+
+.my_post hr {
+    width: 100%;
+    height: 1px;
+    background: var(--lightgrey);
+    border: 0;
+    margin: 0;
+    border-style: solid;
+
+}
+
+.post_bottom {
+    padding: 5px 5px 0 5px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.7rem;
+    font-weight: 520;
+    color: var(--darkergrey);
+}
+
+.post_bottom .post_icon {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.post_bottom .post_icon:hover {
+    background: var(--bodygrey);
+    border-radius: 10px;
+}
+
+.post_bottom .post_icon img {
+    margin: 0 5px 0 0;
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+/* create rooom starts */
+
+
+
+
+.room {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.room .room-icon {
+    display: flex;
+    align-items: center;
+    border: 1px solid #45abff;
+    padding: 0 10px;
+    border-radius: 8px;
+
+    margin-right: 5px;
+    color: rgb(12, 106, 230);
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.room-icon:hover {
+    background: #efefef;
+    cursor: pointer;
+}
+
+.room-icon img {
+    width: 25px;
+    margin-right: 8px;
+}
+
+.room-profile {
+    display: flex;
+}
+
+.room .room-profile img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin: 0 8px;
+
+}
+
+.room-profile .circle1,
+.circle2,
+.circle3,
+.circle4 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #1bb72a;
+    border: 2px solid white;
+    position: relative;
+    /* bottom: 15px; */
+    /* left: ; */
+    top: 15px;
+    right: 15px;
+}
+
+
+/* roooom endss */
+
+/* feed posts */
+
+.posts{
+    margin: 10px 0;
+    width:485px;
+    height: auto;
+    background: var(--headerbg);
+    padding: 5px 0;
+    border-radius: 7px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.2);
+}
+
+.posts .post_top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.posts .post_top .pfp_and_name{
+    display: flex;
+    align-items: center;
+}
+
+.posts .post_top .pfp_and_name img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.posts .poster .friends_name{
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.posts .poster .friends_name:hover{
+    text-decoration: underline;
+}
+
+.posts .poster .time{
+    font-size: 0.7rem;
+    color: var(--darkergrey);
+    margin: 3px 0;
+}
+
+.posts .caption{
+    font-size: 0.8rem;
+    margin: 5px;
+    font-weight: 500;
+    
+}
+
+.posts img{
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.postimage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.postimage img{
+    width: 100%;
+    height: 100%;
+}
+ .posts .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+    font-size: 0.8rem;
+}
+
+.info .emojis{
+    display: flex;
+}
+
+.emojis img{
+    width: 16px;
+    height: 16px;
+}
+.info .emojis p{
+    margin-left: 5px;
+    
+}
+
+.info .comment{
+    display: flex;
+}
+
+.info .comment p{
+    margin-left: 5px;
+}
+
+/* sidebar2 startssssssss */
+
+
+
+.sidebar2-contactlist {
+    display: flex;
+    margin-top: 3px;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+
+    
+}
+
+.sidebar2-contactlist img {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.sidebar2-contactlist .text {
+    color: var(--darkergrey);
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+.sidebar2-contacts li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: 520;
+}
+
+.sidebar2-contacts img {
+    margin: 0 0 10px 0;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.sidebar2 .circle {
+    width: 10px;
+    height: 10px;
+    background: #27cc37;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    top: 5px;
+    right: 12px;
+}
+
+.sidebar2 .empty {
+    width: 10px;
+    height: 10px;
+}
+
+/* sidebar2 ends */
+
+/* responsive aheaddd  */
+
+
+/* for mobile screens */
+@media (300px <= width <=550px) {
+
+    .sidebar1,
+    .sidebar2,
+    .nav1 .searchbox input ,.my_post hr , .nav2 {
+        display: none;
+    }
+
+
+    .stories{
+        display: flex;
+        justify-content:space-between;
+        overflow-x: scroll;
+        
+    }
+
+    .feed{
+        width: 100%;
+    }
+    .mystory,
+    .friend-story {
+        height: 120px;
+        width: 70px;
+        
+    }
+
+    .story-name .name {
+        position: relative;
+        font-size: 0.6rem;
+        right: 3px;
+    }
+   
+    .my_post .post_bottom {
+        margin: 0;
+        padding: 0;
+    }
+
+    .room {
+        overflow-x: scroll;
+        
+    }
+
+    .posts{
+        width: 98vw;
+        
+    }
+
+}
+
+
+/* for tablets */
+@media (width<=1200px) {
+
+    .sidebar1, .sidebar2, .nav2{
+        display: none;
+    }
+
+    
+}
